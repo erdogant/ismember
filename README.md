@@ -23,12 +23,11 @@
 ## Requirements
 pip install numpy
 ```
-
 ## Quick Start
 ```
+
 pip install ismember
 ```
-
 * Alternatively, install ismember from the GitHub source:
 ```bash
 git clone https://github.com/erdogant/ismember.git
