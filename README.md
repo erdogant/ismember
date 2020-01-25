@@ -4,6 +4,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/ismember)](https://pypi.org/project/ismember/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/ismember/blob/master/LICENSE)
 [![Downloads](https://pepy.tech/badge/ismember/week)](https://pepy.tech/project/ismember/week)
+[![Donate Bitcoin](https://img.shields.io/badge/donate-orange.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
 
 * Python package ismember returns array elements that are members of set array
 
@@ -74,14 +75,17 @@ b_vec[idx]
 
 ```
 
-## References
+### References
 * https://in.mathworks.com/help/matlab/ref/ismember.html
    
-## Maintainers
+### Maintainers
 * Erdogan Taskesen, github: [erdogant](https://github.com/erdogant)
 
-## Contribute
+### Contribute
 * Contributions are welcome.
 
-## Licence
+### Licence
 See [LICENSE](LICENSE) for details.
+
+### Donation
+* This work is created and maintained in my free time. If this package is usefull to you and if want to see more like this, you can show your <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">gratitude</a> :) Thanks!
