@@ -38,7 +38,7 @@ python setup.py install
 
 ### Import ismember package
 ```python
-import ismember as ismember
+from ismember import ismember
 ```
 
 ### Example:
