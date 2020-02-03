@@ -5,7 +5,6 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/ismember/blob/master/LICENSE)
 [![Downloads](https://pepy.tech/badge/ismember/week)](https://pepy.tech/project/ismember/week)
 [![Donate](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
-[![codecov](https://github.com/ismember/codecov-exe)](https://github.com/ismember/codecov-exe)
 
 
 * Python package ismember returns array elements that are members of set array
