@@ -1,38 +1,7 @@
 """Python package ismember returns array elements that are members of set array.
 
-  from ismember import ismember
-  [Lia,Locb]= ismember(list1, list2)
-
- 
- Example
- -------
-    import numpy as np
-    from ismember import ismember
-
-    a_vec  = [1,2,3,None]
-    b_vec  = [4,1,2]
-    [I,idx] = ismember(a_vec,b_vec)
-    np.array(a_vec)[I]
-    np.array(b_vec)[idx]
-
-    a_vec   = pd.DataFrame(['aap','None','mies','aap','boom','mies',None,'mies','mies','pies',None])
-    b_vec   = pd.DataFrame([None,'mies','mies','pies',None])
-    [I,idx] = ismember(a_vec,b_vec)
-    a_vec.values[I]
-    b_vec.values[idx]
-
-    a_vec   = np.array([1,2,3,None])
-    b_vec   = np.array([1,2,4])
-    [I,idx] = ismember(a_vec,b_vec)
-    a_vec[I]
-    b_vec[idx]
-
-    a_vec   = np.array(['boom','aap','mies','aap'])
-    b_vec   = np.array(['aap','boom','aap'])
-    [I,idx] = ismember(a_vec,b_vec)
-    a_vec[I]
-    b_vec[idx]
-
+from ismember import ismember
+[Lia,Locb]= ismember(list1, list2)
 
 """
 
@@ -43,7 +12,6 @@
 # Licence     : MIT
 # --------------------------------------------------------------------------
 
-#%% Libraries
 import numpy as np
 
 # %% Main
@@ -67,6 +35,14 @@ def ismember(a_vec, b_vec):
     in B. Elsewhere, the array contains logical 0 (false)
     -------
     Tuple
+    
+    Example
+    -------
+    a_vec = np.array([1,2,3,None])
+    b_vec = np.array([4,1,2])
+    [Iloc,idx] = ismember(a_vec,b_vec)
+    a_vec[Iloc] == b_vec[idx]
+    
 
     """
     I   = []
