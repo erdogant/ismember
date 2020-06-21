@@ -67,6 +67,16 @@ b_vec   = np.array(['aap','boom','aap'])
 a_vec[I]
 b_vec[idx]
 
+# Example with matrices
+# Create two random matrices
+a_vec = np.random.randint(0,10,(5,8))
+b_vec = np.random.randint(0,10,(5,10))
+# Row-wise comparison
+Iloc, idx = ismember(a_vec, b_vec, 'rows')
+# Print results for the first row:
+i=0
+a_vec[i,Iloc[i]]==b_vec[i,idx[i]]
+
 ```
 
 ### References
