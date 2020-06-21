@@ -27,3 +27,11 @@ def test_ismember():
     b_vec   = np.array(['aap','boom','aap'])
     [I,idx] = ismember(a_vec,b_vec)
     assert np.all(a_vec[I]==b_vec[idx])
+
+    # Test 5: matrices
+    a_vec = np.random.randint(0,10,(5,8))
+    b_vec = np.random.randint(0,10,(5,10))
+    Iloc, idx = ismember(a_vec, b_vec, 'rows')
+    
+    for i in np.arange(0,a_vec.shape[0]):
+        assert np.all(a_vec[i,Iloc[i]]==b_vec[i,idx[i]])
