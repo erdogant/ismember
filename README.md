@@ -3,33 +3,26 @@
 [![Python](https://img.shields.io/pypi/pyversions/ismember)](https://img.shields.io/pypi/pyversions/ismember)
 [![PyPI Version](https://img.shields.io/pypi/v/ismember)](https://pypi.org/project/ismember/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/ismember/blob/master/LICENSE)
-[![Downloads](https://pepy.tech/badge/ismember/week)](https://pepy.tech/project/ismember/week)
-[![Donate](https://img.shields.io/badge/donate-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
+[![Coffee](https://img.shields.io/badge/coffee-black-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)
+[![Downloads](https://pepy.tech/badge/ismember)](https://pepy.tech/project/ismember)
 
 
 * Python package ismember returns array elements that are members of set array
 
 ## Contents
 - [Installation](#-installation)
-- [Requirements](#-Requirements)
-- [Quick Start](#-quick-start)
 - [Contribute](#-contribute)
-- [Citation](#-citation)
-- [Maintainers](#-maintainers)
 - [License](#-copyright)
 
 ## Installation
 * Install ismember from PyPI (recommended). ismember is compatible with Python 3.6+ and runs on Linux, MacOS X and Windows. 
 * It is distributed under the MIT license.
 
-## Requirements
-pip install numpy
-```
-## Quick Start
-```
 
+```bash
 pip install ismember
 ```
+
 * Alternatively, install ismember from the GitHub source:
 ```bash
 git clone https://github.com/erdogant/ismember.git
@@ -79,14 +72,7 @@ b_vec[idx]
 ### References
 * https://in.mathworks.com/help/matlab/ref/ismember.html
    
-### Maintainers
+### Maintainer
 * Erdogan Taskesen, github: [erdogant](https://github.com/erdogant)
-
-### Contribute
 * Contributions are welcome.
-
-### Licence
-See [LICENSE](LICENSE) for details.
-
-### Donation
-* This work is created and maintained in my free time. If you wish to buy me a <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">Coffee</a> for this work, it is very appreciated.
+* If you wish to buy me a <a href="https://erdogant.github.io/donate/?currency=USD&amount=5">Coffee</a> for this work, it is very appreciated :)
