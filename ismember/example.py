@@ -81,3 +81,35 @@ def ismember_stack(a, b):
         if elt not in bind:
             bind[elt] = i
     return [bind.get(itm, None) for itm in a]  # None can be replaced by any other "not in b" value
+
+# %%
+# Import library
+from ismember import ismember
+from datetime import datetime
+
+# data
+A = np.random.randint(0,10000,700000)
+B = np.random.randint(0,10000,700000)
+
+# Lookup
+start = datetime.now()
+Iloc,idx = ismember(A, B)
+end = datetime.now()
+print(end-start)
+
+# Iloc is boolean defining existence of d in d_unique
+print(Iloc)
+# [ True False False  True  True]
+
+# indexes of d_unique that exists in d
+print(idx)
+# [4 4 3]
+
+print(B[idx])
+# [3 3 6]
+
+print(A[Iloc])
+# [3 3 6]
+
+# These vectors will match
+A[Iloc]==B[idx]
