@@ -113,3 +113,9 @@ print(A[Iloc])
 
 # These vectors will match
 A[Iloc]==B[idx]
+
+# %% TODO
+a = np.array([[4, 6],[2, 6],[5, 2]])
+b = np.array([[1, 7],[1, 8],[2, 6],[2, 1],[2, 4],[4, 6],[4, 7],[5, 9],[5, 2],[5, 1]])
+_,index  = ismember(a,b)
+
