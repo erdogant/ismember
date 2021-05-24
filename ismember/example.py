@@ -5,11 +5,22 @@ import numpy as np
 from ismember import ismember
 import pandas as pd
 
+# %%
+a_vec = np.array(((1, 2, 3),
+              (4, 5, 6),
+              (7, 8, 9),
+              (10, 11, 12)))
+
+b_vec = np.array(((4, 5, 6),
+              (7, 8, 0)))
+
+Lia, Locb = ismember(a_vec, b_vec, 'rows')
+
 # %% Example 1
 
 a_vec  = [1,2,3,None]
 b_vec  = [4,1,2]
-[I,idx] = ismember(a_vec,b_vec)
+I, idx = ismember(a_vec,b_vec)
 np.array(a_vec)[I]
 np.array(b_vec)[idx]
 
@@ -42,7 +53,7 @@ b_vec[idx]
 
 a_vec = np.random.randint(0,10,(5,8))
 b_vec = np.random.randint(0,10,(5,10))
-Iloc, idx = ismember(a_vec, b_vec, 'rows')
+Iloc, idx = ismember(a_vec, b_vec, 'elementwise')
 
 i=0
 a_vec[i,Iloc[i]]==b_vec[i,idx[i]]
