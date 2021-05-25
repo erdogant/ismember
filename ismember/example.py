@@ -5,40 +5,44 @@ import numpy as np
 from ismember import ismember
 import pandas as pd
 
-# %%
+# %% Row wise
 a_vec = np.array(((1, 2, 3),
-              (4, 5, 6),
-              (7, 8, 9),
-              (10, 11, 12)))
+                  (4, 5, 6),
+                  (7, 8, 9),
+                  (10, 11, 12),
+                  (4, 5, 6)))
 
 b_vec = np.array(((4, 5, 6),
-              (7, 8, 0)))
+                  (7, 8, 0),
+                  (10, 11, 12)))
 
 Lia, Locb = ismember(a_vec, b_vec, 'rows')
+
+print(a_vec[Lia])
+print(b_vec[Locb])
 
 # %% Example 1
 
 a_vec  = [1,2,3,None]
 b_vec  = [4,1,2]
 I, idx = ismember(a_vec,b_vec)
-np.array(a_vec)[I]
-np.array(b_vec)[idx]
+print(np.array(a_vec)[I])
+print(np.array(b_vec)[idx])
 
 # %% Example 2
 
 a_vec   = pd.DataFrame(['aap','None','mies','aap','boom','mies',None,'mies','mies','pies',None])
 b_vec   = pd.DataFrame([None,'mies','mies','pies',None])
 [I,idx] = ismember(a_vec,b_vec)
-a_vec.values[I]
-b_vec.values[idx].flatten()
+a_vec.values[I] == b_vec.values[idx].flatten()
 
 # %% Example 3
 
 a_vec   = np.array([1,2,3,None])
 b_vec   = np.array([1,2,4])
 [I,idx] = ismember(a_vec,b_vec)
-a_vec[I]
-b_vec[idx]
+print(a_vec[I])
+print(b_vec[idx])
 
 
 # %% Example 4
@@ -46,8 +50,8 @@ b_vec[idx]
 a_vec   = np.array(['boom','aap','mies','aap'])
 b_vec   = np.array(['aap','boom','aap'])
 [I,idx] = ismember(a_vec,b_vec)
-a_vec[I]
-b_vec[idx]
+print(a_vec[I])
+print(b_vec[idx])
 
 # %% Example 5
 
@@ -125,8 +129,10 @@ print(A[Iloc])
 # These vectors will match
 A[Iloc]==B[idx]
 
-# %% TODO
+# %% Row-wise
 a = np.array([[4, 6],[2, 6],[5, 2]])
 b = np.array([[1, 7],[1, 8],[2, 6],[2, 1],[2, 4],[4, 6],[4, 7],[5, 9],[5, 2],[5, 1]])
-_,index  = ismember(a,b)
+Iloc, idx = ismember(a,b, 'rows')
+
+a[Iloc] == b[idx]
 
