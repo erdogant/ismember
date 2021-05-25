@@ -75,12 +75,19 @@ b_vec = np.random.randint(0,10,(5,10))
 # Element-wise comparison
 Iloc, idx = ismember(a_vec, b_vec, 'elementwise')
 # Print results for the first row:
-a_vec[i,Iloc[0]]==b_vec[i,idx[0]]
+i=0
+a_vec[i,Iloc[i]]==b_vec[i,idx[i]]
 
 # Row wise comparison
 a_vec = np.array(((1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12)))
 b_vec = np.array(((4, 5, 6), (7, 8, 0)))
 Iloc, idx = ismember(a_vec, b_vec, 'rows')
+a_vec[Iloc]==b_vec[idx]
+
+print(a_vec[Iloc])
+[[4 5 6]]
+print(b_vec[idx])
+[[4 5 6]]
 
 ```
 
