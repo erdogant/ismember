@@ -1,5 +1,1 @@
-#conda create -n env_ismember python=3.6
-#conda activate env_ismember
-#conda install spyder
-
 numpy 
