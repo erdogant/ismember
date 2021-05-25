@@ -22,7 +22,7 @@ def ismember(a_vec, b_vec, method=None):
     a_vec : list or array
     b_vec : list or array
     method : [None, 'rows', 'elementwise'] (default: None).
-        'elementwise': Element wise matrice comparison
+        'elementwise': For each row, all elements are compared.
         'rows': Row-wise matrice comparison.
 
     Returns an array containing logical 1 (true) where the data in A is found 
@@ -41,46 +41,56 @@ def ismember(a_vec, b_vec, method=None):
     >>> a_vec = np.array(((1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12)))
     >>> b_vec = np.array(((4, 5, 6), (7, 8, 0)))
     >>> Iloc, idx = ismember(a_vec, b_vec, 'rows')
-    >>>
+    >>> a_vec[Iloc]==b_vec[idx]
 
     """
-
-    # Append nan to b_vec to make shape similar
-    if (method=='elementwise') and (a_vec.shape[0]>b_vec.shape[0]):
-        nanrows = [[0]*b_vec.shape[1]] * (a_vec.shape[0] - b_vec.shape[0])
-        b_vec = np.concatenate((b_vec, nanrows))
-
-    # Set types
-    a_vec, b_vec = _settypes(a_vec, b_vec)
-
     # Compute
     if method is None:
+        a_vec, b_vec = _settypes(a_vec, b_vec)
         Iloc, idx = _compute(a_vec, b_vec)
     elif method=='rows':
+        a_vec, b_vec = _settypes(a_vec, b_vec)
         Iloc, idx = _row_wise(a_vec, b_vec)
     elif method=='elementwise':
-        # if a_vec.shape[0]!=b_vec.shape[0]: raise Exception('Error: Input matrices should have same number of rows.')
-        # Compute row-wise over the matrices
-        out = list(map(lambda x,y: _compute(x,y), a_vec, b_vec))
-        # Unzipping
-        Iloc, idx = list(zip(*out))
+        Iloc, idx = _elementwise(a_vec, b_vec)
     else:
         Iloc, idx = None, None
 
     return(Iloc, idx)
 
 
-# %% Typing
-def _row_wise(a_vec, b_vec):
-    Iloc = np.zeros(a_vec.shape[0]).astype(bool)
-    idx = np.zeros(a_vec.shape[0])*np.nan
-    for vec in enumerate(a_vec):
-        I, _ = _compute(vec[1], b_vec)
-        if np.all(I):
-            Iloc[vec[0]]=True
-            idx[vec[0]]=vec[0]
+# %% Row-wise comparison
+def _elementwise(a_vec, b_vec):
+    # Append nan to b_vec to make shape similar
+    if a_vec.shape[0]>b_vec.shape[0]:
+        nanrows = [[0]*b_vec.shape[1]] * (a_vec.shape[0] - b_vec.shape[0])
+        b_vec = np.concatenate((b_vec, nanrows))
 
+    # Set dtypes
+    a_vec, b_vec = _settypes(a_vec, b_vec)
+    # Compute row-wise over the matrices
+    out = list(map(lambda x,y: _compute(x,y), a_vec, b_vec))
+    # Unzipping
+    Iloc, idx = list(zip(*out))
+    # Return
     return Iloc, idx
+
+# %% Row-wise comparison
+def _row_wise(a_vec, b_vec):
+    def is_row_in(a, b):
+        return np.all(a[:, None] == b, axis=2).any(axis=1)
+    
+    # Step 1: Find row-wise the elements of a_vec in b_vec
+    bool_ind = is_row_in(a_vec, b_vec)
+    common = a_vec[bool_ind]
+
+    # Step 2: Find the indices for b_vec
+    # In case multiple-similar rows are detected, take only the unique ones
+    common_unique, common_inv = np.unique(common, return_inverse=True, axis=0)
+    b_unique, b_ind = np.unique(b_vec, return_index=True, axis=0)
+    common_ind = b_ind[is_row_in(b_unique, common_unique)]
+    return bool_ind, common_ind[common_inv]
+
 
 # %% Typing
 def _settypes(a_vec, b_vec):
