@@ -43,8 +43,8 @@ def test_ismember():
         assert np.all(a_vec[i,Iloc[i]]==b_vec[i,idx[i]])
 
     # Test rows
-    a_vec = np.array(((1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12)))
-    b_vec = np.array(((4, 5, 6), (7, 8, 0)))
+    a_vec = np.array(((1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12), (4, 5, 6)))
+    b_vec = np.array(((4, 5, 6), (7, 8, 0), (10, 11, 12)))
     Lia, Locb = ismember(a_vec, b_vec, 'rows')
-    assert np.all(Lia==[False, True, False, False])
-    assert Locb[1]==1
+    assert np.all(a_vec[Lia]==b_vec[Locb])
+
