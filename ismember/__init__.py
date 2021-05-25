@@ -2,7 +2,7 @@ from ismember.ismember import ismember
 
 __author__ = 'Erdogan Tasksen'
 __email__ = 'erdogant@gmail.com'
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 
 # module level doc-string
 __doc__ = """
@@ -28,13 +28,15 @@ Example
 >>> b_vec = np.random.randint(0,10,(5,10))
 >>> Iloc, idx = ismember(a_vec, b_vec, 'elementwise')
 >>> # Evaluate the result for the first record:
->>> a_vec[i,Iloc[0]]==b_vec[i,idx[0]]
+>>> i=3
+>>> a_vec[i,Iloc[i]]==b_vec[i,idx[i]]
 >>>
 >>> # Row wise comparison
 >>> a_vec = np.array(((1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12)))
 >>> b_vec = np.array(((4, 5, 6), (7, 8, 0)))
 >>> Iloc, idx = ismember(a_vec, b_vec, 'rows')
->>>
+>>> a_vec[Iloc]==b_vec[idx]
+
 
 References
 ----------
