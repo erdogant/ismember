@@ -3,20 +3,19 @@
 [![Python](https://img.shields.io/pypi/pyversions/ismember)](https://img.shields.io/pypi/pyversions/ismember)
 [![PyPI Version](https://img.shields.io/pypi/v/ismember)](https://pypi.org/project/ismember/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/ismember/blob/master/LICENSE)
+[![Downloads](https://pepy.tech/badge/ismember/month)](https://pepy.tech/project/ismember/month)
 [![Downloads](https://pepy.tech/badge/ismember)](https://pepy.tech/project/ismember)
-[![BuyMeCoffee](https://img.shields.io/badge/buymea-coffee-yellow.svg)](https://www.buymeacoffee.com/erdogant)
+<!---[![BuyMeCoffee](https://img.shields.io/badge/buymea-coffee-yellow.svg)](https://www.buymeacoffee.com/erdogant)-->
 <!---[![Coffee](https://img.shields.io/badge/coffee-black-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)-->
 
 * Python package ismember returns array elements that are members of set array
 
-## Contents
-- [Installation](#-installation)
-- [Contribute](#-contribute)
-- [License](#-copyright)
+# 
+**Star this repo if you like it! ⭐️**
+#
+
 
 ## Installation
-* Install ismember from PyPI (recommended). ismember is compatible with Python 3.6+ and runs on Linux, MacOS X and Windows. 
-* It is distributed under the MIT license.
 
 
 ```bash
