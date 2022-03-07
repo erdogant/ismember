@@ -1,5 +1,4 @@
-
-Check whether the elements of X are present in Y.
+Check whether the elements of X are present in Y
 ###############################################################
 
 In the following example, the ``ismember`` function checks whether the elements present in X are also present in Y and returns the logical values in the form of True (1) and False (0). The first value of X i.e. 4 is present in Y, so the first value of the resultant LX is 1. Similarly, the values at the 3rd and 4th positions are also present in the Y, so the resultant values are 1. Since the value at 2nd position i.e. 6 is not present in Y, so the resultant value is 0.
@@ -34,7 +33,7 @@ In the underneath example, the ``ismember`` function first checks whether the va
 	# array([2, 4, 1], dtype=int64)
 
 
-Check whether the rows using ismember function.
+Row wise comparison (1)
 ##################################################
 
 .. code:: python
@@ -55,8 +54,8 @@ Check whether the rows using ismember function.
 	# array([2]
 
 
-Row wise comparison
-#######################
+Row wise comparison (2)
+########################
 
 .. code:: python
 
