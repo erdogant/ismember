@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API References &mdash; ismember ismember documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Coding quality" href="Coding%20quality.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> ismember
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Pip install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html#uninstalling">Uninstalling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">What is ismember?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html#input-data">Input data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html#output">Output</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Check whether the elements of X are present in Y.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#determine-the-corresponding-location-of-the-values-that-are-present-in-y-array">Determine the corresponding location of the values that are present in Y array</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#check-whether-the-rows-using-ismember-function">Check whether the rows using ismember function.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#row-wise-comparison">Row wise comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#elementwise-comparison">Elementwise comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#string-input">String input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#handling-none">Handling None</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html#string-input-with-none">String input with None</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html">Sponsor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#github">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coding%20quality.html">Coding quality</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API References</a></li>
+</ul>
+
+    <a href= "genindex.html">Index</a>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ismember</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>API References</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ismember.ismember.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-ismember.ismember">
+<span id="api-references"></span><h1>API References<a class="headerlink" href="#module-ismember.ismember" title="Permalink to this headline"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="ismember.ismember.ismember">
+<span class="sig-prename descclassname"><span class="pre">ismember.ismember.</span></span><span class="sig-name descname"><span class="pre">ismember</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ismember.ismember.ismember" title="Permalink to this definition"></a></dt>
+<dd><p>Ismember: MATLAB equivalent function</p>
+<p>MATLAB equivalent ismember function
+[LIA, LOCB] = ISMEMBER(A,B) also returns an array LOCB containing the
+lowest absolute index in B for each element in A which is a member of
+B and 0 if there is no such index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a_vec</strong> (<em>list</em><em> or </em><em>array</em>) – </p></li>
+<li><p><strong>b_vec</strong> (<em>list</em><em> or </em><em>array</em>) – </p></li>
+<li><p><strong>method</strong> (<em>[</em><em>None</em><em>, </em><em>'rows'</em><em>, </em><em>'elementwise'</em><em>] </em><em>(</em><em>default: None</em><em>)</em><em>.</em>) – ‘elementwise’: For each row, all elements are compared.
+‘rows’: Row-wise matrice comparison.</p></li>
+<li><p><strong>found</strong> (<em>Returns an array containing logical 1</em><em> (</em><em>true</em><em>) </em><em>where the data in A is</em>) – </p></li>
+<li><p><strong>Elsewhere</strong> (<em>in B.</em>) – </p></li>
+<li><p><strong>(</strong><strong>false</strong><strong>)</strong> (<em>the array contains logical 0</em>) – </p></li>
+<li><p><strong>-------</strong> – </p></li>
+<li><p><strong>Tuple</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="kc">None</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Iloc</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span><span class="n">b_vec</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_vec</span><span class="p">[</span><span class="n">Iloc</span><span class="p">]</span> <span class="o">==</span> <span class="n">b_vec</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Row wise comparison</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">b_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">)))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Iloc</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span> <span class="n">b_vec</span><span class="p">,</span> <span class="s1">&#39;rows&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a_vec</span><span class="p">[</span><span class="n">Iloc</span><span class="p">]</span><span class="o">==</span><span class="n">b_vec</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<hr>
+<center>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEADP27U&placement=erdogantgithubio" id="_carbonads_js"></script>
+</center>
+<hr></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Coding%20quality.html" class="btn btn-neutral float-left" title="Coding quality" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Erdogan Taskesen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

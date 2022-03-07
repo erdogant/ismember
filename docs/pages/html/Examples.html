@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check whether the elements of X are present in Y. &mdash; ismember ismember documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sponsor" href="Documentation.html" />
+    <link rel="prev" title="What is ismember?" href="Tutorials.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> ismember
+          </a>
+              <div class="version">
+                1.0.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+    
+              <p class="caption" role="heading"><span class="caption-text">Installation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Pip install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html#uninstalling">Uninstalling</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">What is ismember?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html#input-data">Input data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html#output">Output</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Check whether the elements of X are present in Y.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#determine-the-corresponding-location-of-the-values-that-are-present-in-y-array">Determine the corresponding location of the values that are present in Y array</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#check-whether-the-rows-using-ismember-function">Check whether the rows using ismember function.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#row-wise-comparison">Row wise comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#elementwise-comparison">Elementwise comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#string-input">String input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#handling-none">Handling None</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#string-input-with-none">String input with None</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html">Sponsor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Documentation.html#github">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coding%20quality.html">Coding quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ismember.ismember.html">API References</a></li>
+</ul>
+
+    <a href= "genindex.html">Index</a>
+  
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ismember</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Check whether the elements of X are present in Y.</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="check-whether-the-elements-of-x-are-present-in-y">
+<h1>Check whether the elements of X are present in Y.<a class="headerlink" href="#check-whether-the-elements-of-x-are-present-in-y" title="Permalink to this headline"></a></h1>
+<p>In the following example, the <code class="docutils literal notranslate"><span class="pre">ismember</span></code> function checks whether the elements present in X are also present in Y and returns the logical values in the form of True (1) and False (0). The first value of X i.e. 4 is present in Y, so the first value of the resultant LX is 1. Similarly, the values at the 3rd and 4th positions are also present in the Y, so the resultant values are 1. Since the value at 2nd position i.e. 6 is not present in Y, so the resultant value is 0.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">LX</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">LX</span><span class="p">)</span>
+<span class="c1"># array([ True, False,  True,  True])</span>
+</pre></div>
+</div>
+</section>
+<section id="determine-the-corresponding-location-of-the-values-that-are-present-in-y-array">
+<h1>Determine the corresponding location of the values that are present in Y array<a class="headerlink" href="#determine-the-corresponding-location-of-the-values-that-are-present-in-y-array" title="Permalink to this headline"></a></h1>
+<p>In the underneath example, the <code class="docutils literal notranslate"><span class="pre">ismember</span></code> function first checks whether the values present in X are also a part of Y. It subsequently returns the values in the form of True and False which can be seen in LX. After that, we have given another variable in syntax to determine the lowest index of the values of X that are present in Y. So, the first element of X i.e.4 is present in Y at only position 3, so it will return 3. The second element which is present in Y is 3 and the respective position is 5, 2 is present in the 2nd position in Y. If the values are not present in Y, then the location value will be 0.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">LX</span><span class="p">,</span> <span class="n">LocY</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">LX</span><span class="p">)</span>
+<span class="c1"># array([ True, False,  True,  True])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">LocY</span><span class="p">)</span>
+<span class="c1"># array([2, 4, 1], dtype=int64)</span>
+</pre></div>
+</div>
+</section>
+<section id="check-whether-the-rows-using-ismember-function">
+<h1>Check whether the rows using ismember function.<a class="headerlink" href="#check-whether-the-rows-using-ismember-function" title="Permalink to this headline"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+                  <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">)))</span>
+
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="mi">13</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
+                  <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+                  <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">)))</span>
+
+<span class="n">LX</span><span class="p">,</span> <span class="n">LocY</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;rows&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">LX</span><span class="p">)</span>
+<span class="c1"># array([False,  True])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">LocY</span><span class="p">)</span>
+<span class="c1"># array([2]</span>
+</pre></div>
+</div>
+</section>
+<section id="row-wise-comparison">
+<h1>Row wise comparison<a class="headerlink" href="#row-wise-comparison" title="Permalink to this headline"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+                  <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                  <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
+                  <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">),</span>
+                  <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)))</span>
+
+<span class="n">b_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
+                  <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+                  <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">)))</span>
+
+<span class="n">Lia</span><span class="p">,</span> <span class="n">Locb</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span> <span class="n">b_vec</span><span class="p">,</span> <span class="s1">&#39;rows&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a_vec</span><span class="p">[</span><span class="n">Lia</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_vec</span><span class="p">[</span><span class="n">Locb</span><span class="p">])</span>
+
+<span class="c1">#</span>
+<span class="c1"># [[ 4  5  6]</span>
+<span class="c1">#  [10 11 12]</span>
+<span class="c1">#  [ 4  5  6]]</span>
+<span class="c1"># [[ 4  5  6]</span>
+<span class="c1">#  [10 11 12]</span>
+<span class="c1">#  [ 4  5  6]]</span>
+</pre></div>
+</div>
+</section>
+<section id="elementwise-comparison">
+<h1>Elementwise comparison<a class="headerlink" href="#elementwise-comparison" title="Permalink to this headline"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,(</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">b_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">Iloc</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span> <span class="n">b_vec</span><span class="p">,</span> <span class="s1">&#39;elementwise&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a_vec</span><span class="p">)</span>
+<span class="c1"># [[6 8 9 0 3 3 9 4]</span>
+<span class="c1">#  [5 8 4 9 9 6 9 7]</span>
+<span class="c1">#  [4 7 0 9 0 7 7 9]</span>
+<span class="c1">#  [5 0 4 1 3 0 3 6]</span>
+<span class="c1">#  [3 5 6 2 2 8 2 6]]</span>
+
+ <span class="nb">print</span><span class="p">(</span><span class="n">b_vec</span><span class="p">)</span>
+<span class="c1"># [[7 5 8 9 3 1 8 1 9 3]</span>
+<span class="c1">#  [7 3 1 0 2 2 2 3 3 6]</span>
+<span class="c1">#  [8 0 1 7 2 3 3 1 7 6]</span>
+<span class="c1">#  [8 1 8 1 3 3 9 9 7 4]</span>
+<span class="c1">#  [1 5 0 5 9 8 2 2 0 6]]</span>
+
+<span class="c1"># The following is identical</span>
+<span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">a_vec</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">Iloc</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span><span class="o">==</span><span class="n">b_vec</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">idx</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
+</pre></div>
+</div>
+</section>
+<section id="string-input">
+<h1>String input<a class="headerlink" href="#string-input" title="Permalink to this headline"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;boom&#39;</span><span class="p">,</span><span class="s1">&#39;aap&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;aap&#39;</span><span class="p">])</span>
+<span class="n">b_vec</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;aap&#39;</span><span class="p">,</span><span class="s1">&#39;boom&#39;</span><span class="p">,</span><span class="s1">&#39;aap&#39;</span><span class="p">])</span>
+<span class="p">[</span><span class="n">I</span><span class="p">,</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span><span class="n">b_vec</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a_vec</span><span class="p">[</span><span class="n">I</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_vec</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+
+<span class="c1"># [&#39;boom&#39; &#39;aap&#39; &#39;aap&#39;]</span>
+<span class="c1"># [&#39;boom&#39; &#39;aap&#39; &#39;aap&#39;]</span>
+</pre></div>
+</div>
+</section>
+<section id="handling-none">
+<h1>Handling None<a class="headerlink" href="#handling-none" title="Permalink to this headline"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="kc">None</span><span class="p">]</span>
+<span class="n">b_vec</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">I</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span><span class="n">b_vec</span><span class="p">)</span>
+
+<span class="c1"># Collect same elements</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a_vec</span><span class="p">)[</span><span class="n">I</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">b_vec</span><span class="p">)[</span><span class="n">idx</span><span class="p">])</span>
+
+<span class="c1"># [1 2]</span>
+<span class="c1"># [1 2]</span>
+</pre></div>
+</div>
+</section>
+<section id="string-input-with-none">
+<h1>String input with None<a class="headerlink" href="#string-input-with-none" title="Permalink to this headline"></a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span>   <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="s1">&#39;aap&#39;</span><span class="p">,</span><span class="s1">&#39;None&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;aap&#39;</span><span class="p">,</span><span class="s1">&#39;boom&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;pies&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">])</span>
+<span class="n">b_vec</span>   <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="kc">None</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;pies&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">])</span>
+
+<span class="p">[</span><span class="n">I</span><span class="p">,</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span><span class="n">b_vec</span><span class="p">)</span>
+
+<span class="c1"># Check whether the results are correct</span>
+<span class="n">a_vec</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">I</span><span class="p">]</span> <span class="o">==</span> <span class="n">b_vec</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>[1] <a class="reference external" href="https://www.datacamp.com/community/tutorials/pickle-python-tutorial">https://www.datacamp.com/community/tutorials/pickle-python-tutorial</a></p>
+<hr>
+<center>
+        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEADP27U&placement=erdogantgithubio" id="_carbonads_js"></script>
+</center>
+<hr></section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Tutorials.html" class="btn btn-neutral float-left" title="What is ismember?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Documentation.html" class="btn btn-neutral float-right" title="Sponsor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Erdogan Taskesen.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
