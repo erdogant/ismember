@@ -6,6 +6,22 @@ from ismember import ismember
 import pandas as pd
 
 # %% Row wise
+X = [4, 6, 3, 2]
+Y = [1, 2, 4, 5, 3, 8]
+LX, _ = ismember(X, Y)
+
+# %%
+X = np.array(((1, 2, 4, 7),
+			  (3, 4, 5, 9)))
+
+Y = np.array(((13, 4, 5, 9),
+			  (0, 3, 8, 7),
+			  (3, 4, 5, 9)))
+
+LX, LocY = ismember(X, Y, 'rows')
+
+
+# %% Row wise
 a_vec = np.array(((1, 2, 3),
                   (4, 5, 6),
                   (7, 8, 9),
