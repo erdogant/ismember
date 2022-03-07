@@ -4,7 +4,7 @@
 [![PyPI Version](https://img.shields.io/pypi/v/ismember)](https://pypi.org/project/ismember/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/ismember/blob/master/LICENSE)
 [![Downloads](https://pepy.tech/badge/ismember)](https://pepy.tech/project/ismember)
-[![Downloads](https://pepy.tech/badge/ismember/month)](https://pepy.tech/project/ismember/month)
+[![Downloads](https://pepy.tech/badge/ismember/month)](https://pepy.tech/project/ismember/)
 [![Sphinx](https://img.shields.io/badge/Sphinx-Docs-Green)](https://erdogant.github.io/ismember/)
 <!---[![BuyMeCoffee](https://img.shields.io/badge/buymea-coffee-yellow.svg)](https://www.buymeacoffee.com/erdogant)-->
 <!---[![Coffee](https://img.shields.io/badge/coffee-black-grey.svg)](https://erdogant.github.io/donate/?currency=USD&amount=5)-->
