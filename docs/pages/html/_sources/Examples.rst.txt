@@ -146,7 +146,7 @@ Handling None
 	# [1 2]
 
 
-String input with None
+Pandas Dataframes
 ########################
 
 .. code:: python
