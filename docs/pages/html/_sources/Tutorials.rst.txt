@@ -4,7 +4,7 @@ What is ismember?
 ``ismember`` is a Python library that checks whether the elements in X is present in Y. Or in other words, we can check if a particular element belongs to an array or not by using ismember() function. The result is in the form of logical 1 (True) or logical 0 (False). 
 
 
-Input data
+Input
 ###########################
 
 The input arrays can be one of the underneath types, and if the ``rows=True`` parameter is specified in the syntax, then the input arrays should have the same number of columns. 
@@ -15,7 +15,13 @@ The input arrays can be one of the underneath types, and if the ``rows=True`` pa
 	* string
 	* datetime
 	* categorical
-	
+
+Each of these input arrays can be in the form of:
+
+	* Pandas DataFrame
+	* Numpy Array
+	* List
+
 
 Output
 ###########################

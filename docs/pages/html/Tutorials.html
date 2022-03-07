@@ -50,7 +50,7 @@
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">What is ismember?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#input-data">Input data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#input">Input</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#output">Output</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
@@ -102,8 +102,8 @@
 <h1>What is ismember?<a class="headerlink" href="#what-is-ismember" title="Permalink to this headline"></a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">ismember</span></code> is a Python library that checks whether the elements in X is present in Y. Or in other words, we can check if a particular element belongs to an array or not by using ismember() function. The result is in the form of logical 1 (True) or logical 0 (False).</p>
 </section>
-<section id="input-data">
-<h1>Input data<a class="headerlink" href="#input-data" title="Permalink to this headline"></a></h1>
+<section id="input">
+<h1>Input<a class="headerlink" href="#input" title="Permalink to this headline"></a></h1>
 <p>The input arrays can be one of the underneath types, and if the <code class="docutils literal notranslate"><span class="pre">rows=True</span></code> parameter is specified in the syntax, then the input arrays should have the same number of columns.</p>
 <blockquote>
 <div><ul class="simple">
@@ -113,6 +113,14 @@
 <li><p>string</p></li>
 <li><p>datetime</p></li>
 <li><p>categorical</p></li>
+</ul>
+</div></blockquote>
+<p>Each of these input arrays can be in the form of:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pandas DataFrame</p></li>
+<li><p>Numpy Array</p></li>
+<li><p>List</p></li>
 </ul>
 </div></blockquote>
 </section>
