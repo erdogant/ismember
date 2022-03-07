@@ -13,30 +13,47 @@
 
 
 # 
-**Star this repo if you like it! ⭐️**
-#
+**⭐️ Star this repo if you like it ⭐️**
+# 
 
 
-## Installation
+### [Documentation pages](https://erdogant.github.io/ismember/)
 
+On the [documentation pages](https://erdogant.github.io/ismember/) you can find more information about ``ismember`` with examples. 
 
+# 
+
+##### Install bnlearn from PyPI
 ```bash
-pip install ismember
+pip install ismember     # normal install
+pip install -U ismember  # update if needed
 ```
 
-* Alternatively, install ismember from the GitHub source:
-```bash
-git clone https://github.com/erdogant/ismember.git
-cd ismember
-python setup.py install
-```  
 
 ### Import ismember package
 ```python
 from ismember import ismember
 ```
 
-### Example:
+#
+
+#### [Example: Check whether the elements of X are present in Y](https://erdogant.github.io/ismember/pages/html/Examples.html#)
+
+#
+
+#### [Example: Determine the corresponding location of the values that are present in Y array](https://erdogant.github.io/ismember/pages/html/Examples.html#determine-the-corresponding-location-of-the-values-that-are-present-in-y-array)
+
+#
+
+#### [Example: Row wise comparison](https://erdogant.github.io/ismember/pages/html/Examples.html#row-wise-comparison-1)
+
+#
+
+#### [Example: Elementwise comparison](https://erdogant.github.io/ismember/pages/html/Examples.html#elementwise-comparison)
+
+
+#### Quick examples
+
 ```python
 import numpy as np
 from ismember import ismember
