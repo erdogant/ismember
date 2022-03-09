@@ -78,7 +78,13 @@ def _elementwise(a_vec, b_vec):
 # %% Row-wise comparison
 def _row_wise(a_vec, b_vec):
     def is_row_in(a, b):
-        return np.all(a[:, None] == b, axis=2).any(axis=1)
+        # Get the unique row index
+        _, rev = np.unique(np.concatenate((b,a)),axis=0,return_inverse=True)
+        # Split the index
+        a_rev = rev[len(b):]
+        b_rev = rev[:len(b)]
+        # Return the result:
+        return np.isin(a_rev,b_rev)
     
     # Step 1: Find row-wise the elements of a_vec in b_vec
     bool_ind = is_row_in(a_vec, b_vec)
