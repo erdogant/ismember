@@ -59,29 +59,8 @@ import numpy as np
 from ismember import ismember
 
 # Example with lists
-a_vec  = [1,2,3,None]
-b_vec  = [4,1,2]
-[I,idx] = ismember(a_vec,b_vec)
-np.array(a_vec)[I]
-np.array(b_vec)[idx]
-```
-
-```python
-# Example with DataFrames
-a_vec = pd.DataFrame(['aap','None','mies','aap','boom','mies',None,'mies','mies','pies',None])
-b_vec = pd.DataFrame([None,'mies','mies','pies',None])
-I, idx = ismember(a_vec,b_vec)
-a_vec.values[I]
-b_vec.values[idx]
-```
-
-```python
-# Example with Numpy array
-a_vec = np.array(['boom','aap','mies','aap'])
-b_vec = np.array(['aap','boom','aap'])
-I, idx = ismember(a_vec,b_vec)
-a_vec[I]
-b_vec[idx]
+I, idx = ismember([1,2,3,None], [4,1,2])
+I, idx = ismember(["1","2","3"], ["4","1","2"])
 ```
 
 ### References
