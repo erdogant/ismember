@@ -23,7 +23,7 @@ On the [documentation pages](https://erdogant.github.io/ismember/) you can find 
 
 # 
 
-##### Install bnlearn from PyPI
+##### Install ismember from PyPI
 ```bash
 pip install ismember     # normal install
 pip install -U ismember  # update if needed
@@ -34,6 +34,21 @@ pip install -U ismember  # update if needed
 ```python
 from ismember import ismember
 ```
+<hr>
+
+#### Quick example
+
+Use the documentation pages for more detailed usage. Some of the most used functionalities are linked below.
+
+```python
+
+from ismember import ismember
+
+# Example with lists
+I, idx = ismember([1,2,3,None], [4,1,2])
+I, idx = ismember(["1","2","3"], ["4","1","2"])
+```
+
 
 #
 
@@ -51,38 +66,7 @@ from ismember import ismember
 
 #### [Example: Elementwise comparison](https://erdogant.github.io/ismember/pages/html/Examples.html#elementwise-comparison)
 
-
-#### Quick examples
-
-```python
-import numpy as np
-from ismember import ismember
-
-# Example with lists
-a_vec  = [1,2,3,None]
-b_vec  = [4,1,2]
-[I,idx] = ismember(a_vec,b_vec)
-np.array(a_vec)[I]
-np.array(b_vec)[idx]
-```
-
-```python
-# Example with DataFrames
-a_vec = pd.DataFrame(['aap','None','mies','aap','boom','mies',None,'mies','mies','pies',None])
-b_vec = pd.DataFrame([None,'mies','mies','pies',None])
-I, idx = ismember(a_vec,b_vec)
-a_vec.values[I]
-b_vec.values[idx]
-```
-
-```python
-# Example with Numpy array
-a_vec = np.array(['boom','aap','mies','aap'])
-b_vec = np.array(['aap','boom','aap'])
-I, idx = ismember(a_vec,b_vec)
-a_vec[I]
-b_vec[idx]
-```
+<hr> 
 
 ### References
 * https://in.mathworks.com/help/matlab/ref/ismember.html
