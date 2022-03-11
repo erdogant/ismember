@@ -34,6 +34,21 @@ pip install -U ismember  # update if needed
 ```python
 from ismember import ismember
 ```
+<hr>
+
+#### Quick example
+
+Use the documentation pages for more detailed usage. Some of the most used functionalities are linked below.
+
+```python
+import numpy as np
+from ismember import ismember
+
+# Example with lists
+I, idx = ismember([1,2,3,None], [4,1,2])
+I, idx = ismember(["1","2","3"], ["4","1","2"])
+```
+
 
 #
 
@@ -51,17 +66,7 @@ from ismember import ismember
 
 #### [Example: Elementwise comparison](https://erdogant.github.io/ismember/pages/html/Examples.html#elementwise-comparison)
 
-
-#### Quick examples
-
-```python
-import numpy as np
-from ismember import ismember
-
-# Example with lists
-I, idx = ismember([1,2,3,None], [4,1,2])
-I, idx = ismember(["1","2","3"], ["4","1","2"])
-```
+<hr> 
 
 ### References
 * https://in.mathworks.com/help/matlab/ref/ismember.html
