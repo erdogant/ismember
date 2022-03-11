@@ -41,7 +41,7 @@ from ismember import ismember
 Use the documentation pages for more detailed usage. Some of the most used functionalities are linked below.
 
 ```python
-import numpy as np
+
 from ismember import ismember
 
 # Example with lists
