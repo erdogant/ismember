@@ -23,7 +23,7 @@ On the [documentation pages](https://erdogant.github.io/ismember/) you can find 
 
 # 
 
-##### Install bnlearn from PyPI
+##### Install ismember from PyPI
 ```bash
 pip install ismember     # normal install
 pip install -U ismember  # update if needed
