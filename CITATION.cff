@@ -13,7 +13,7 @@ keywords:
   - "matching"
 license: "MIT"
 message: "If you use this software, please cite it using these metadata."
-repository-code: "https://github.com/erdogant/ismember"
+repository-code: "https://erdogant.github.io/ismember"
 title: "ismember returns array elements that are members of set array."
 version: "1.0.0"
 ...
