@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What is ismember? &mdash; ismember ismember documentation</title>
+  <title>&lt;no title&gt; &mdash; ismember ismember documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
@@ -19,9 +19,7 @@
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Check whether the elements of X are present in Y" href="Examples.html" />
-    <link rel="prev" title="Pip install" href="Installation.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,10 +47,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Installation.html#uninstalling">Uninstalling</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Tutorials</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">What is ismember?</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#input">Input</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#output">Output</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html">What is ismember?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html#input">Input</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Tutorials.html#output">Output</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Examples</span></p>
 <ul>
@@ -90,9 +88,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>What is ismember?</li>
+      <li>&lt;no title&gt;</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/Tutorials.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/sponsor.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -100,51 +98,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="what-is-ismember">
-<h1>What is ismember?<a class="headerlink" href="#what-is-ismember" title="Permalink to this heading"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">ismember</span></code> is a Python library that checks whether the elements in X is present in Y. Or in other words, we can check if a particular element belongs to an array or not by using ismember() function. The result is in the form of logical 1 (True) or logical 0 (False).</p>
-</section>
-<section id="input">
-<h1>Input<a class="headerlink" href="#input" title="Permalink to this heading"></a></h1>
-<p>The input arrays can be one of the underneath types, and if the <code class="docutils literal notranslate"><span class="pre">rows=True</span></code> parameter is specified in the syntax, then the input arrays should have the same number of columns.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>logical</p></li>
-<li><p>numeric</p></li>
-<li><p>character</p></li>
-<li><p>string</p></li>
-<li><p>datetime</p></li>
-<li><p>categorical</p></li>
+  <div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you ❤️ this project, you can help in various ways.</p>
+<ul class="simple">
+<li><p>Become a <a class="reference external" href="https://github.com/sponsors/erdogant?o=esb/">Sponsor</a>!</p></li>
+<li><p><a class="reference external" href="https://www.buymeacoffee.com/erdogant">Buy</a> me a coffee! I ❤️ coffee :)</p></li>
+<li><p><a class="reference external" href="https://erdogant.github.io/donate/?currency=USD&amp;amount=1000">Donate</a> in Bitcoin.</p></li>
+<li><p>Follow me on medium! Go to my <a class="reference external" href="https://erdogant.medium.com/">medium profile</a> and press <em>follow</em>.</p></li>
+<li><p><strong>Star</strong> this repo at the github page.</p></li>
+<li><p>Other contributions can be in the form of feature requests, idea discussions, reporting bugs, opening pull requests.</p></li>
 </ul>
-</div></blockquote>
-<p>Each of these input arrays can be in the form of:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Pandas DataFrame</p></li>
-<li><p>Numpy Array</p></li>
-<li><p>List</p></li>
-</ul>
-</div></blockquote>
-</section>
-<section id="output">
-<h1>Output<a class="headerlink" href="#output" title="Permalink to this heading"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">Lx</span> <span class="pre">=</span> <span class="pre">ismember(X,</span> <span class="pre">Y)</span></code> : This checks whether the elements in X is present in Y. If the elements are present, then it returns 1(True) else it returns 0(False). If X and Y are in the form of tables or timetables, then it returns the logical value for every row present and if X and Y are in the form of timetables, then row times are considered. The resultant value Lx is a column vector.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Lx</span> <span class="pre">=</span> <span class="pre">ismember</span> <span class="pre">(X,</span> <span class="pre">Y,</span> <span class="pre">&quot;rows&quot;)</span></code> : This syntax considers the rows of X and Y as single entities and determines the logical values which are in the form of 1 and 0. If the values are present, then it returns logical 1 (True) else it returns logical 0 (False). The rows option is not valid if cell arrays are used, provided that the input array is categorical or datetime array.</p>
-<p><code class="docutils literal notranslate"><span class="pre">Lx,</span> <span class="pre">LocationY</span> <span class="pre">=</span> <span class="pre">ismember</span> <span class="pre">(____)</span></code> : Here Location Y is used to find the lowest index values present in Y if the values present in X are a member of Y. If the value is 0, then it indicates that the elements present in X are not a part of Y. If there are rows option specified in the syntax, then LocationY contains the lowest index of Y, provided that rows in X should be a part of rows in Y. If the value is 0, then X is not in the row of Y. If X and Y are in the form of tables or timetables, then LocationY contains the lowest index of Y, provided that rows in X should be a part of rows in Y. If the value is 0, then X is not in the row of Y.</p>
-<p>[1] <a class="reference external" href="https://www.datacamp.com/community/tutorials/pickle-python-tutorial">https://www.datacamp.com/community/tutorials/pickle-python-tutorial</a></p>
-<hr>
-<center>
-        <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEADP27U&placement=erdogantgithubio" id="_carbonads_js"></script>
-</center>
-<hr></section>
-
+<p>Cheers Mate.</p>
+</div>
+<iframe src="https://github.com/sponsors/erdogant/button" title="Sponsor erdogant" height="35" width="116" style="border: 0;"></iframe>
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="Installation.html" class="btn btn-neutral float-left" title="Pip install" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Examples.html" class="btn btn-neutral float-right" title="Check whether the elements of X are present in Y" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
