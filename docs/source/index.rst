@@ -5,9 +5,10 @@ ismember's documentation!
 Or in other words, we can check if a particular element belongs to an array or not by using ``ismember`` function.
 
 
-Star is important
-======================
-If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/ismember/>`_!
+
+You contribution is important
+==============================
+If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/ismember/>`_ and have a look at the `sponser page <https://github.com/erdogant/ismember/pages/html/Documentation.html>`_!
 
 
 Github

@@ -15,7 +15,6 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -101,7 +100,7 @@
            <div itemprop="articleBody">
              
   <section id="check-whether-the-elements-of-x-are-present-in-y">
-<h1>Check whether the elements of X are present in Y<a class="headerlink" href="#check-whether-the-elements-of-x-are-present-in-y" title="Permalink to this heading"></a></h1>
+<h1>Check whether the elements of X are present in Y<a class="headerlink" href="#check-whether-the-elements-of-x-are-present-in-y" title="Permalink to this headline"></a></h1>
 <p>In the following example, the <code class="docutils literal notranslate"><span class="pre">ismember</span></code> function checks whether the elements present in X are also present in Y and returns the logical values in the form of True (1) and False (0). The first value of X i.e. 4 is present in Y, so the first value of the resultant LX is 1. Similarly, the values at the 3rd and 4th positions are also present in the Y, so the resultant values are 1. Since the value at 2nd position i.e. 6 is not present in Y, so the resultant value is 0.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -113,7 +112,7 @@
 </div>
 </section>
 <section id="determine-the-corresponding-location-of-the-values-that-are-present-in-y-array">
-<h1>Determine the corresponding location of the values that are present in Y array<a class="headerlink" href="#determine-the-corresponding-location-of-the-values-that-are-present-in-y-array" title="Permalink to this heading"></a></h1>
+<h1>Determine the corresponding location of the values that are present in Y array<a class="headerlink" href="#determine-the-corresponding-location-of-the-values-that-are-present-in-y-array" title="Permalink to this headline"></a></h1>
 <p>In the underneath example, the <code class="docutils literal notranslate"><span class="pre">ismember</span></code> function first checks whether the values present in X are also a part of Y. It subsequently returns the values in the form of True and False which can be seen in LX. After that, we have given another variable in syntax to determine the lowest index of the values of X that are present in Y. So, the first element of X i.e.4 is present in Y at only position 3, so it will return 3. The second element which is present in Y is 3 and the respective position is 5, 2 is present in the 2nd position in Y. If the values are not present in Y, then the location value will be 0.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
@@ -128,7 +127,7 @@
 </div>
 </section>
 <section id="row-wise-comparison-1">
-<h1>Row wise comparison (1)<a class="headerlink" href="#row-wise-comparison-1" title="Permalink to this heading"></a></h1>
+<h1>Row wise comparison (1)<a class="headerlink" href="#row-wise-comparison-1" title="Permalink to this headline"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
                   <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">)))</span>
 
@@ -147,7 +146,7 @@
 </div>
 </section>
 <section id="row-wise-comparison-2">
-<h1>Row wise comparison (2)<a class="headerlink" href="#row-wise-comparison-2" title="Permalink to this heading"></a></h1>
+<h1>Row wise comparison (2)<a class="headerlink" href="#row-wise-comparison-2" title="Permalink to this headline"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
                   <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>
                   <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span>
@@ -174,7 +173,7 @@
 </div>
 </section>
 <section id="elementwise-comparison">
-<h1>Elementwise comparison<a class="headerlink" href="#elementwise-comparison" title="Permalink to this heading"></a></h1>
+<h1>Elementwise comparison<a class="headerlink" href="#elementwise-comparison" title="Permalink to this headline"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,(</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
 <span class="n">b_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,(</span><span class="mi">5</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 <span class="n">Iloc</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span> <span class="n">b_vec</span><span class="p">,</span> <span class="s1">&#39;elementwise&#39;</span><span class="p">)</span>
@@ -200,7 +199,7 @@
 </div>
 </section>
 <section id="string-input">
-<h1>String input<a class="headerlink" href="#string-input" title="Permalink to this heading"></a></h1>
+<h1>String input<a class="headerlink" href="#string-input" title="Permalink to this headline"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;boom&#39;</span><span class="p">,</span><span class="s1">&#39;aap&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;aap&#39;</span><span class="p">])</span>
 <span class="n">b_vec</span>   <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s1">&#39;aap&#39;</span><span class="p">,</span><span class="s1">&#39;boom&#39;</span><span class="p">,</span><span class="s1">&#39;aap&#39;</span><span class="p">])</span>
 <span class="p">[</span><span class="n">I</span><span class="p">,</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span><span class="n">b_vec</span><span class="p">)</span>
@@ -214,7 +213,7 @@
 </div>
 </section>
 <section id="handling-none">
-<h1>Handling None<a class="headerlink" href="#handling-none" title="Permalink to this heading"></a></h1>
+<h1>Handling None<a class="headerlink" href="#handling-none" title="Permalink to this headline"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="kc">None</span><span class="p">]</span>
 <span class="n">b_vec</span>  <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
 <span class="n">I</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">ismember</span><span class="p">(</span><span class="n">a_vec</span><span class="p">,</span><span class="n">b_vec</span><span class="p">)</span>
@@ -229,7 +228,7 @@
 </div>
 </section>
 <section id="pandas-dataframes">
-<h1>Pandas Dataframes<a class="headerlink" href="#pandas-dataframes" title="Permalink to this heading"></a></h1>
+<h1>Pandas Dataframes<a class="headerlink" href="#pandas-dataframes" title="Permalink to this headline"></a></h1>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a_vec</span>   <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="s1">&#39;aap&#39;</span><span class="p">,</span><span class="s1">&#39;None&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;aap&#39;</span><span class="p">,</span><span class="s1">&#39;boom&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;pies&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">])</span>
 <span class="n">b_vec</span>   <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="kc">None</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;mies&#39;</span><span class="p">,</span><span class="s1">&#39;pies&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">])</span>
 
