@@ -8,7 +8,7 @@ Or in other words, we can check if a particular element belongs to an array or n
 
 You contribution is important
 ==============================
-If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/ismember/>`_ and have a look at the `sponser page <https://github.com/erdogant/ismember/pages/html/Documentation.html>`_!
+If you ❤️ this project, **star** this repo at the `github page <https://github.com/erdogant/ismember/>`_ and have a look at the `sponser page <https://erdogant.github.io/ismember/pages/html/Documentation.html>`_!
 
 
 Github
