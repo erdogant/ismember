@@ -1,3 +1,5 @@
+.. include:: add_top.add
+
 Check whether the elements of X are present in Y
 ###############################################################
 
@@ -166,10 +168,5 @@ Pandas Dataframes
 [1] https://www.datacamp.com/community/tutorials/pickle-python-tutorial
 
 
-.. raw:: html
 
-	<hr>
-	<center>
-		<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEADP27U&placement=erdogantgithubio" id="_carbonads_js"></script>
-	</center>
-	<hr>
+.. include:: add_bottom.add
