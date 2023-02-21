@@ -17,6 +17,7 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -70,7 +71,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Documentation.html#github">Github</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Documentation.html#citing">Citing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Coding%20quality.html">Coding quality</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API References</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ismember.ismember.ismember"><code class="docutils literal notranslate"><span class="pre">ismember()</span></code></a></li>
+</ul>
+</li>
 </ul>
 
     <a href= "genindex.html">Index</a>
@@ -99,31 +103,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <hr>
-<center>
-        <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
-        <div data-ea-publisher="erdogantgithubio" data-ea-type="text"></div>
-        <!-- <div data-ea-publisher="erdogantgithubio" data-ea-type="text" data-ea-style="fixedfooter"></div> -->
-</center>
-<hr><section id="module-ismember.ismember">
+  <section id="module-ismember.ismember">
 <span id="api-references"></span><h1>API References<a class="headerlink" href="#module-ismember.ismember" title="Permalink to this heading"></a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="ismember.ismember.ismember">
 <span class="sig-prename descclassname"><span class="pre">ismember.ismember.</span></span><span class="sig-name descname"><span class="pre">ismember</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b_vec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ismember.ismember.ismember" title="Permalink to this definition"></a></dt>
 <dd><p>Ismember: MATLAB equivalent function</p>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
 <p>MATLAB equivalent ismember function
 [LIA, LOCB] = ISMEMBER(A,B) also returns an array LOCB containing the lowest absolute index in B for each element in
 A which is a member of B and 0 if there is no such index.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>a_vec</strong> (<em>list</em><em> or </em><em>array</em>) – </p></li>
-<li><p><strong>b_vec</strong> (<em>list</em><em> or </em><em>array</em>) – </p></li>
-<li><p><strong>method</strong> (<em>[</em><em>None</em><em>, </em><em>'rows'</em><em>, </em><em>'elementwise'</em><em>] </em><em>(</em><em>default: None</em><em>)</em><em>.</em>) – ‘elementwise’: For each row, all elements are compared.
-‘rows’: Row-wise matrice comparison.</p></li>
-<li><p><strong>Elsewhere</strong> (<em>Returns an array containing logical 1</em><em> (</em><em>true</em><em>) </em><em>where the data in A is found in B.</em>) – </p></li>
-</ul>
+<dt class="field-odd">param a_vec</dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">type a_vec</dt>
+<dd class="field-even"><p>list or array</p>
 </dd>
+<dt class="field-odd">param b_vec</dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">type b_vec</dt>
+<dd class="field-even"><p>list or array</p>
+</dd>
+<dt class="field-odd">param method</dt>
+<dd class="field-odd"><p>‘elementwise’: For each row, all elements are compared.
+‘rows’: Row-wise matrice comparison.</p>
+</dd>
+<dt class="field-even">type method</dt>
+<dd class="field-even"><p>[None, ‘rows’, ‘elementwise’] (default: None).</p>
+</dd>
+<dt class="field-odd">param Returns an array containing logical 1 (true) where the data in A is found in B. Elsewhere</dt>
+<dd class="field-odd"><p></p></dd>
 </dl>
 <p>:param :
 :param the array contains logical 0 (false):
@@ -147,6 +157,7 @@ A which is a member of B and 0 if there is no such index.</p>
 <li><p>Github: <a class="reference external" href="https://github.com/erdogant/ismember">https://github.com/erdogant/ismember</a></p></li>
 <li><p>Docs : <a class="reference external" href="https://erdogant.github.io/ismember">https://erdogant.github.io/ismember</a></p></li>
 </ul>
+</section>
 </dd></dl>
 
 <hr>

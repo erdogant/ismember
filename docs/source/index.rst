@@ -3,8 +3,6 @@ ismember's documentation!
 
 |python| |pypi| |docs| |stars| |LOC| |downloads_month| |downloads_total| |license| |forks| |open issues| |project status| |colab| |repo-size| |donate|
 
-.. include:: add_top.add
-
 
 ``ismember`` is a Python library that checks whether the elements in X is present in Y. 
 Or in other words, we can check if a particular element belongs to an array or not by using ``ismember`` function.

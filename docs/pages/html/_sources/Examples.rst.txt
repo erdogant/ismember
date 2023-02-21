@@ -1,5 +1,3 @@
-.. include:: add_top.add
-
 Check whether the elements of X are present in Y
 ###############################################################
 
