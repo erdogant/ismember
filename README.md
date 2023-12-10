@@ -2,6 +2,7 @@
 
 [![Python](https://img.shields.io/pypi/pyversions/ismember)](https://img.shields.io/pypi/pyversions/ismember)
 [![PyPI Version](https://img.shields.io/pypi/v/ismember)](https://pypi.org/project/ismember/)
+![GitHub Repo stars](https://img.shields.io/github/stars/erdogant/ismember)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/erdogant/ismember/blob/master/LICENSE)
 [![Downloads](https://pepy.tech/badge/ismember)](https://pepy.tech/project/ismember)
 [![Downloads](https://pepy.tech/badge/ismember/month)](https://pepy.tech/project/ismember/)
