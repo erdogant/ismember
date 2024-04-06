@@ -3,3 +3,4 @@ rst2pdf
 spyder-kernels
 sphinx
 pytest
+pandas
