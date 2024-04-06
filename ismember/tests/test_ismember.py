@@ -22,7 +22,7 @@ class TestCLUSTIMAGE(unittest.TestCase):
 		# Test 3
 		a_vec   = np.array([1,2,3,None])
 		b_vec   = np.array([1,2,4])
-		[, idx = ismember(a_vec,b_vec)
+		I, idx = ismember(a_vec,b_vec)
 		assert np.all(a_vec[I]==b_vec[idx])
 
 		# Test 4
