@@ -51,16 +51,13 @@ def ismember(a_vec, b_vec, method=None):
     # Compute
     if method is None:
         a_vec, b_vec = _settypes(a_vec, b_vec)
-        Iloc, idx = _compute(a_vec, b_vec)
-    elif method=='rows':
+        return _compute(a_vec, b_vec)
+    if method=='rows':
         a_vec, b_vec = _settypes(a_vec, b_vec)
-        Iloc, idx = _row_wise(a_vec, b_vec)
+        return _row_wise(a_vec, b_vec)
     elif method=='elementwise':
-        Iloc, idx = _elementwise(a_vec, b_vec)
-    else:
-        Iloc, idx = None, None
-
-    return(Iloc, idx)
+        return _elementwise(a_vec, b_vec)
+    return None, None
 
 
 # %% Row-wise comparison
