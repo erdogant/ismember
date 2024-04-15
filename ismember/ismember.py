@@ -140,8 +140,8 @@ def _compute(a_vec, b_vec):
 def is_row_in(a, b):
     """
     Calculates `a` in `b`, broadcasting over `a` only.
-    Returns a boolean array of the same shape as `a` that is True
-    where a row of `a` is in `b` and False otherwise.
+    Returns a boolean array that is True where a row
+    of `a` is in `b` and False otherwise.
     """
     # Get the unique row index
     _, rev = np.unique(np.concatenate((b, a)), axis=0, return_inverse=True)
