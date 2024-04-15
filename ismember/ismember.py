@@ -25,10 +25,14 @@ def ismember(a_vec, b_vec, method=None):
         'elementwise': For each row, all elements are compared.
         'rows': Row-wise matrice comparison.
 
-    Returns an array containing logical 1 (true) where the data in A is found in B. Elsewhere,
-    the array contains logical 0 (false)
+    Returns
     -------
-    Tuple
+    Iloc: np.ndarray
+        Array containing logical 1 (true) where the data in A is found in B.
+        Elsewhere, the array contains logical 0 (false)
+    idx: np.ndarray
+        Array containing the lowest index in B for each value in A that is
+        a member of B.
 
     Example
     -------
