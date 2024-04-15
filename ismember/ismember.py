@@ -6,6 +6,7 @@
 
 import numpy as np
 
+
 # %% ismember
 def ismember(a_vec, b_vec, method=None):
     """Ismember: MATLAB equivalent function
@@ -52,10 +53,10 @@ def ismember(a_vec, b_vec, method=None):
     if method is None:
         a_vec, b_vec = _settypes(a_vec, b_vec)
         return _compute(a_vec, b_vec)
-    if method=='rows':
+    if method == 'rows':
         a_vec, b_vec = _settypes(a_vec, b_vec)
         return _row_wise(a_vec, b_vec)
-    elif method=='elementwise':
+    elif method == 'elementwise':
         return _elementwise(a_vec, b_vec)
     return None, None
 
@@ -63,7 +64,7 @@ def ismember(a_vec, b_vec, method=None):
 # %% Row-wise comparison
 def _elementwise(a_vec, b_vec):
     # Append nan to b_vec to make shape similar
-    if a_vec.shape[0]>b_vec.shape[0]:
+    if a_vec.shape[0] > b_vec.shape[0]:
         nanrows = [[0] * b_vec.shape[1]] * (a_vec.shape[0] - b_vec.shape[0])
         b_vec = np.concatenate((b_vec, nanrows))
 
@@ -103,22 +104,22 @@ def _row_wise(a_vec, b_vec):
 # %% Typing
 def _settypes(a_vec, b_vec):
     if 'pandas' in str(type(a_vec)):
-        a_vec.values[np.where(a_vec.values==None)]='NaN'
+        a_vec.values[np.where(a_vec.values==None)] = 'NaN'
         a_vec = np.array(a_vec.values)
     if 'pandas' in str(type(b_vec)):
-        b_vec.values[np.where(b_vec.values==None)]='NaN'
+        b_vec.values[np.where(b_vec.values==None)] = 'NaN'
         b_vec = np.array(b_vec.values)
     if isinstance(a_vec, list):
-        a_vec=np.array(a_vec)
+        a_vec = np.array(a_vec)
         # a_vec[a_vec==None]='NaN'
     if isinstance(b_vec, list):
-        b_vec=np.array(b_vec)
+        b_vec = np.array(b_vec)
         # b_vec[b_vec==None]='NaN'
 
     # Check dtypes. In case of O (Object), set to str.
-    if a_vec.dtype=='O':
+    if a_vec.dtype == 'O':
         a_vec = a_vec.astype(str)
-    if b_vec.dtype=='O':
+    if b_vec.dtype == 'O':
         b_vec = b_vec.astype(str)
 
     return a_vec, b_vec
