@@ -80,15 +80,6 @@ def _elementwise(a_vec, b_vec):
 
 # %% Row-wise comparison
 def _row_wise(a_vec, b_vec):
-    def is_row_in(a, b):
-        # Get the unique row index
-        _, rev = np.unique(np.concatenate((b, a)), axis=0, return_inverse=True)
-        # Split the index
-        a_rev = rev[len(b):]
-        b_rev = rev[:len(b)]
-        # Return the result:
-        return np.isin(a_rev, b_rev)
-
     # Step 1: Find row-wise the elements of a_vec in b_vec
     bool_ind = is_row_in(a_vec, b_vec)
     common = a_vec[bool_ind]
@@ -104,10 +95,10 @@ def _row_wise(a_vec, b_vec):
 # %% Typing
 def _settypes(a_vec, b_vec):
     if 'pandas' in str(type(a_vec)):
-        a_vec.values[np.where(a_vec.values==None)] = 'NaN'
+        a_vec.values[np.where(a_vec.values == None)] = 'NaN'
         a_vec = np.array(a_vec.values)
     if 'pandas' in str(type(b_vec)):
-        b_vec.values[np.where(b_vec.values==None)] = 'NaN'
+        b_vec.values[np.where(b_vec.values == None)] = 'NaN'
         b_vec = np.array(b_vec.values)
     if isinstance(a_vec, list):
         a_vec = np.array(a_vec)
@@ -133,3 +124,18 @@ def _compute(a_vec, b_vec):
     [b_unique, b_ind] = np.unique(b_vec, return_index=True)
     common_ind = b_ind[np.isin(b_unique, common_unique, assume_unique=True)]
     return bool_ind, common_ind[common_inv]
+
+
+def is_row_in(a, b):
+    """
+    Calculates `a` in `b`, broadcasting over `a` only.
+    Returns a boolean array of the same shape as `a` that is True
+    where a row of `a` is in `b` and False otherwise.
+    """
+    # Get the unique row index
+    _, rev = np.unique(np.concatenate((b, a)), axis=0, return_inverse=True)
+    # Split the index
+    a_rev = rev[len(b):]
+    b_rev = rev[:len(b)]
+    # Return the result:
+    return np.isin(a_rev, b_rev)
