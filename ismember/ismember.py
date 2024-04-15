@@ -35,18 +35,24 @@ def ismember(a_vec, b_vec, method=None):
         Array containing the lowest index in B for each value in A that is
         a member of B.
 
-    Example
-    -------
-    >>> a_vec = np.array([1,2,3,None])
+    Examples
+    --------
+    >>> a_vec = np.array([1,2,3])
     >>> b_vec = np.array([4,1,2])
     >>> Iloc, idx = ismember(a_vec,b_vec)
-    >>> a_vec[Iloc] == b_vec[idx]
-    >>>
+    >>> Iloc
+    array([ True,  True, False])
+    >>> idx
+    array([1, 2])
+
     >>> # Row wise comparison
     >>> a_vec = np.array(((1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12)))
     >>> b_vec = np.array(((4, 5, 6), (7, 8, 0)))
     >>> Iloc, idx = ismember(a_vec, b_vec, 'rows')
-    >>> a_vec[Iloc]==b_vec[idx]
+    >>> idx
+    array([0])
+    >>> Iloc
+    array([False, True, False, False])
 
     References
     ----------
