@@ -14,7 +14,8 @@ def ismember(a_vec, b_vec, method=None):
     Description
     -----------
     MATLAB equivalent ismember function
-    [LIA, LOCB] = ISMEMBER(A,B) also returns an array LOCB containing the lowest absolute index in B for each element in
+    [LIA, LOCB] = ISMEMBER(A,B) also returns an array LOCB containing
+    the lowest absolute index in B for each element in
     A which is a member of B and 0 if there is no such index.
 
     Parameters
