@@ -1,4 +1,4 @@
-from ismember.ismember import ismember
+from ismember.ismember import ismember, is_row_in
 
 __author__ = 'Erdogan Tasksen'
 __email__ = 'erdogant@gmail.com'
