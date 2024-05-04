@@ -2,7 +2,7 @@ from ismember.ismember import ismember, is_row_in
 
 __author__ = 'Erdogan Tasksen'
 __email__ = 'erdogant@gmail.com'
-__version__ = '1.0.3'
+__version__ = '1.0.4'
 
 # module level doc-string
 __doc__ = """
