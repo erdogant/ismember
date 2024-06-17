@@ -12,7 +12,7 @@ else:
 with open("README.md", "r", encoding="utf8") as fh:
     long_description = fh.read()
 setuptools.setup(
-     install_requires=['numpy'],
+     install_requires=['numpy<2.0.0'],
      python_requires='>=3',
      name='ismember',
      version=new_version,
