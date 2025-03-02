@@ -1,8 +1,12 @@
-# --------------------------------------------------------------------------
-# Name        : ismember.py
-# Author      : E.Taskesen
-# Contact     : erdogan@gmail.com
-# --------------------------------------------------------------------------
+"""ismember.
+
+Name        : ismember.py
+Author      : E.Taskesen
+Contact     : erdogant@gmail.com
+github      : https://github.com/erdogant/ismember
+Licence     : See licences
+
+"""
 
 import numpy as np
 

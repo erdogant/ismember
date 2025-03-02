@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ismember"
+dynamic = ["version"]
+authors = [{ name = "Erdogan Taskesen", email = "erdogant@gmail.com" },]
+description = "Python package ismember returns array elements that are members of set array."
+readme = "README.md"
+requires-python = ">=3"
+license = { file = "LICENSE" }
+keywords = ["Python", ""]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'numpy<2.0.0',
+]
+
+[project.urls]
+Homepage = "https://erdogant.github.io/ismember"
+Download = "https://github.com/erdogant/ismember/archive/{version}.tar.gz"
+
+[tool.setuptools]
+packages = ["ismember"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = { attr = "ismember.__version__" }
