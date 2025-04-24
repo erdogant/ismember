@@ -69,10 +69,11 @@ I, idx = ismember(["1","2","3"], ["4","1","2"])
 
 <hr> 
 
-### References
-* https://in.mathworks.com/help/matlab/ref/ismember.html
+#### ☕ Support
 
-### Maintainer
-* Erdogan Taskesen, github: [erdogant](https://github.com/erdogant)
-* Contributions are welcome.
-* If you wish to buy me a <a href="https://www.buymeacoffee.com/erdogant">Coffee</a> for this work, it is very appreciated :)
+If you find this project useful, consider supporting me:
+
+<a href="https://www.buymeacoffee.com/erdogant">
+  <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=erdogant&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" />
+</a>
+
