@@ -1,23 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>What is ismember? &mdash; ismember ismember documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=e0179649" />
+
   
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/jquery.js"></script>
-        <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=7713dca8"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -30,14 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="index.html" class="icon icon-home"> ismember
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ismember
           </a>
-              <div class="version">
-                1.0.2
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -90,8 +90,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>What is ismember?</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">What is ismember?</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/Tutorials.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -102,11 +102,11 @@
            <div itemprop="articleBody">
              
   <section id="what-is-ismember">
-<h1>What is ismember?<a class="headerlink" href="#what-is-ismember" title="Permalink to this heading"></a></h1>
+<h1>What is ismember?<a class="headerlink" href="#what-is-ismember" title="Link to this heading"></a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">ismember</span></code> is a Python library that checks whether the elements in X is present in Y. Or in other words, we can check if a particular element belongs to an array or not by using ismember() function. The result is in the form of logical 1 (True) or logical 0 (False).</p>
 </section>
 <section id="input">
-<h1>Input<a class="headerlink" href="#input" title="Permalink to this heading"></a></h1>
+<h1>Input<a class="headerlink" href="#input" title="Link to this heading"></a></h1>
 <p>The input arrays can be one of the underneath types, and if the <code class="docutils literal notranslate"><span class="pre">rows=True</span></code> parameter is specified in the syntax, then the input arrays should have the same number of columns.</p>
 <blockquote>
 <div><ul class="simple">
@@ -128,7 +128,7 @@
 </div></blockquote>
 </section>
 <section id="output">
-<h1>Output<a class="headerlink" href="#output" title="Permalink to this heading"></a></h1>
+<h1>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">Lx</span> <span class="pre">=</span> <span class="pre">ismember(X,</span> <span class="pre">Y)</span></code> : This checks whether the elements in X is present in Y. If the elements are present, then it returns 1(True) else it returns 0(False). If X and Y are in the form of tables or timetables, then it returns the logical value for every row present and if X and Y are in the form of timetables, then row times are considered. The resultant value Lx is a column vector.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Lx</span> <span class="pre">=</span> <span class="pre">ismember</span> <span class="pre">(X,</span> <span class="pre">Y,</span> <span class="pre">&quot;rows&quot;)</span></code> : This syntax considers the rows of X and Y as single entities and determines the logical values which are in the form of 1 and 0. If the values are present, then it returns logical 1 (True) else it returns logical 0 (False). The rows option is not valid if cell arrays are used, provided that the input array is categorical or datetime array.</p>
 <p><code class="docutils literal notranslate"><span class="pre">Lx,</span> <span class="pre">LocationY</span> <span class="pre">=</span> <span class="pre">ismember</span> <span class="pre">(____)</span></code> : Here Location Y is used to find the lowest index values present in Y if the values present in X are a member of Y. If the value is 0, then it indicates that the elements present in X are not a part of Y. If there are rows option specified in the syntax, then LocationY contains the lowest index of Y, provided that rows in X should be a part of rows in Y. If the value is 0, then X is not in the row of Y. If X and Y are in the form of tables or timetables, then LocationY contains the lowest index of Y, provided that rows in X should be a part of rows in Y. If the value is 0, then X is not in the row of Y.</p>
