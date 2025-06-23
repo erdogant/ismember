@@ -1,6 +1,6 @@
 sphinx_rtd_theme
 rst2pdf
-spyder-kernels
+spyder-kernels==3.0
 sphinx
 pytest
 pandas
