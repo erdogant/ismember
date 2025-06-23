@@ -4,3 +4,4 @@ spyder-kernels==3.0
 sphinx
 pytest
 pandas
+irelease
