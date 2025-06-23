@@ -129,9 +129,9 @@ def _settypes(a_vec, b_vec):
         # b_vec[b_vec==None]='NaN'
 
     # Check dtypes. In case of O (Object), set to str.
-    if a_vec.dtype == 'O':
+    if a_vec.dtype == 'O' or b_vec.dtype == 'O':
         a_vec = a_vec.astype(str)
-    if b_vec.dtype == 'O':
+    # if b_vec.dtype == 'O':
         b_vec = b_vec.astype(str)
 
     return a_vec, b_vec
