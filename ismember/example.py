@@ -6,6 +6,24 @@ from ismember import ismember
 import pandas as pd
 np.__version__
 
+#%%
+import ismember
+
+boundaries = np.array([
+    [1,2],
+    [3,4],
+    [6,7],
+    [10,11]
+])
+local_edges = np.array([
+    [6,7],
+    [3,4],
+    [12,3]
+])
+is_local_boundary = ismember.is_row_in(boundaries, local_edges)
+print(is_local_boundary.shape)
+local_boundaries = boundaries[is_local_boundary]
+
 
 # %% Row wise
 X = [4, 6, 3, 2, None]
