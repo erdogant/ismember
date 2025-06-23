@@ -1,13 +1,24 @@
 from ismember.ismember import ismember, is_row_in
+import logging
 
 __author__ = 'Erdogan Tasksen'
 __email__ = 'erdogant@gmail.com'
-__version__ = '1.0.6'
+__version__ = '1.1.0'
+
+# Setup root logger
+_logger = logging.getLogger('ismember')
+_log_handler = logging.StreamHandler()
+_fmt = '[{asctime}] [{name}] [{levelname}] {msg}'
+_formatter = logging.Formatter(fmt=_fmt, style='{', datefmt='%d-%m-%Y %H:%M:%S')
+_log_handler.setFormatter(_formatter)
+_log_handler.setLevel(logging.DEBUG)
+_logger.addHandler(_log_handler)
+_logger.propagate = False
 
 # module level doc-string
 __doc__ = """
-ismember
-=====================================================================
+ismember - A python package that returns an array of elements that are members of set array.
+=============================================================================================
 
 Description
 -----------

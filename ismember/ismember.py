@@ -10,6 +10,12 @@ Licence     : See licences
 
 import numpy as np
 
+import logging
+
+logger = logging.getLogger(__name__)
+if not logger.hasHandlers():
+    logging.basicConfig(level=logging.INFO, format='[{asctime}] [{name}] [{levelname}] {msg}', style='{', datefmt='%d-%m-%Y %H:%M:%S')
+
 
 # %% ismember
 def ismember(a_vec, b_vec, method=None):
