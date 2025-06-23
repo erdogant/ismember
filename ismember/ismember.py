@@ -155,8 +155,13 @@ def is_row_in(a, b):
     """
     # Get the unique row index
     _, rev = np.unique(np.concatenate((b, a)), axis=0, return_inverse=True)
+    # Flatten for compatibility with numpy >=2.0
+    rev = rev.reshape(-1)
     # Split the index
     a_rev = rev[len(b):]
     b_rev = rev[:len(b)]
+    # Flatten in case they are not 1D
+    a_rev = a_rev.reshape(-1)
+    b_rev = b_rev.reshape(-1)
     # Return the result:
     return np.isin(a_rev, b_rev)
