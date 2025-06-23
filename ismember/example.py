@@ -4,11 +4,13 @@
 import numpy as np
 from ismember import ismember
 import pandas as pd
+np.__version__
+
 
 # %% Row wise
-X = [4, 6, 3, 2]
+X = [4, 6, 3, 2, None]
 Y = [1, 2, 4, 5, 3, 8]
-LX, _ = ismember(X, Y)
+LX, idx = ismember(X, Y)
 
 # %%
 X = np.array(((1, 2, 4, 7),

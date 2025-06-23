@@ -46,7 +46,7 @@ Example
 >>> # Example 3: Row wise comparison
 >>> a_vec = np.array(((1, 2, 3), (4, 5, 6), (7, 8, 9), (10, 11, 12)))
 >>> b_vec = np.array(((4, 5, 6), (7, 8, 0)))
->>> Iloc, idx = ismember(a_vec, b_vec, 'rows')s
+>>> Iloc, idx = ismember(a_vec, b_vec, 'rows')
 >>> a_vec[Iloc]==b_vec[idx]
 >>>
 
