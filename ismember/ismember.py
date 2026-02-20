@@ -70,6 +70,12 @@ def ismember(a_vec, b_vec, method=None):
      * Docs : https://erdogant.github.io/ismember
 
     """
+    # Replace None/NaN in pandas DataFrames in-place so callers see 'NaN' when indexing
+    if 'pandas' in str(type(a_vec)):
+        a_vec[:] = a_vec.fillna('NaN')
+    if 'pandas' in str(type(b_vec)):
+        b_vec[:] = b_vec.fillna('NaN')
+
     # Compute
     if method is None:
         a_vec, b_vec = _settypes(a_vec, b_vec)
@@ -116,24 +122,17 @@ def _row_wise(a_vec, b_vec):
 # %% Typing
 def _settypes(a_vec, b_vec):
     if 'pandas' in str(type(a_vec)):
-        a_vec.values[np.where(a_vec.values == None)] = 'NaN'
-        a_vec = np.array(a_vec.values)
+        a_vec = np.array(a_vec, dtype=object)
     if 'pandas' in str(type(b_vec)):
-        b_vec.values[np.where(b_vec.values == None)] = 'NaN'
-        b_vec = np.array(b_vec.values)
+        b_vec = np.array(b_vec, dtype=object)
     if isinstance(a_vec, list):
         a_vec = np.array(a_vec)
-        # a_vec[a_vec==None]='NaN'
     if isinstance(b_vec, list):
         b_vec = np.array(b_vec)
-        # b_vec[b_vec==None]='NaN'
-
     # Check dtypes. In case of O (Object), set to str.
     if a_vec.dtype == 'O' or b_vec.dtype == 'O':
         a_vec = a_vec.astype(str)
-    # if b_vec.dtype == 'O':
         b_vec = b_vec.astype(str)
-
     return a_vec, b_vec
 
 
