@@ -9,7 +9,6 @@ Licence     : See licences
 """
 
 import numpy as np
-
 import logging
 
 logger = logging.getLogger(__name__)
@@ -68,7 +67,12 @@ def ismember(a_vec, b_vec, method=None):
      * Docs : https://erdogant.github.io/ismember
 
     """
-    # Replace None/NaN in pandas DataFrames in-place so callers see 'NaN' when indexing
+    # pandas Index is immutable — convert to array before any processing
+    if 'pandas' in str(type(a_vec)) and 'Index' in str(type(a_vec)):
+        a_vec = a_vec.to_numpy()
+    if 'pandas' in str(type(b_vec)) and 'Index' in str(type(b_vec)):
+        b_vec = b_vec.to_numpy()
+    # Replace None/NaN in pandas DataFrames/Series in-place
     if 'pandas' in str(type(a_vec)):
         a_vec[:] = a_vec.fillna('NaN')
     if 'pandas' in str(type(b_vec)):
