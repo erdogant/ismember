@@ -3,12 +3,12 @@ import logging
 
 __author__ = 'Erdogan Tasksen'
 __email__ = 'erdogant@gmail.com'
-__version__ = '1.1.0'
+__version__ = '1.2.0'
 
 # Setup root logger
 _logger = logging.getLogger('ismember')
 _log_handler = logging.StreamHandler()
-_fmt = '[{asctime}] [{name}] [{levelname}] {msg}'
+_fmt = '[{asctime}] [{name}] [{levelname}] {message}'
 _formatter = logging.Formatter(fmt=_fmt, style='{', datefmt='%d-%m-%Y %H:%M:%S')
 _log_handler.setFormatter(_formatter)
 _log_handler.setLevel(logging.DEBUG)
