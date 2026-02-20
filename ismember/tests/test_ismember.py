@@ -6,6 +6,21 @@ import unittest
 
 class TestCLUSTIMAGE(unittest.TestCase):
 
+    def test_fillna_inplace_compatibility(self):
+        """Ensure None/NaN in pandas DataFrames are replaced with 'NaN' string in-place, compatible with newer pandas that dropped inplace= from extension arrays."""
+        a_vec = pd.DataFrame(['aap', None, 'mies']).astype('O')
+        b_vec = pd.DataFrame([None, 'mies']).astype('O')
+        
+        I, idx = ismember(a_vec, b_vec)
+        
+        # Original DataFrames must be modified in-place: None -> 'NaN'
+        assert a_vec.values[1, 0] == 'NaN', "None in a_vec should be replaced with 'NaN' in-place"
+        assert b_vec.values[0, 0] == 'NaN', "None in b_vec should be replaced with 'NaN' in-place"
+        
+        # Results should match correctly
+        assert list(a_vec.values[I]) == ['NaN', 'mies']
+        assert list(b_vec.values[idx].flatten()) == ['NaN', 'mies']
+        
     def test_ismember(self):
         # Test 1
         a_vec  = [1,2,3,None]
