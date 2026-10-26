@@ -20,7 +20,17 @@ class TestCLUSTIMAGE(unittest.TestCase):
         # Results should match correctly
         assert list(a_vec.values[I]) == ['NaN', 'mies']
         assert list(b_vec.values[idx].flatten()) == ['NaN', 'mies']
-        
+
+    def test_readonly_pandas_array(self):
+        """Index.values returns a read-only StringArray in pandas>=3, which cannot be modified in-place."""
+        a_vec = pd.Index(['aap', None, 'mies']).values
+        b_vec = pd.Index(['mies', 'aap']).values
+
+        I, idx = ismember(a_vec, b_vec)
+
+        assert list(I) == [True, False, True]
+        assert list(idx) == [1, 0]
+
     def test_ismember(self):
         # Test 1
         a_vec  = [1,2,3,None]

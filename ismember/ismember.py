@@ -73,10 +73,17 @@ def ismember(a_vec, b_vec, method=None):
     if 'pandas' in str(type(b_vec)) and 'Index' in str(type(b_vec)):
         b_vec = b_vec.to_numpy()
     # Replace None/NaN in pandas DataFrames/Series in-place
+    # Read-only arrays (e.g. Index.values in pandas>=3) get a filled copy instead
     if 'pandas' in str(type(a_vec)):
-        a_vec[:] = a_vec.fillna('NaN')
+        try:
+            a_vec[:] = a_vec.fillna('NaN')
+        except ValueError:
+            a_vec = a_vec.fillna('NaN')
     if 'pandas' in str(type(b_vec)):
-        b_vec[:] = b_vec.fillna('NaN')
+        try:
+            b_vec[:] = b_vec.fillna('NaN')
+        except ValueError:
+            b_vec = b_vec.fillna('NaN')
 
     # Compute
     if method is None:
